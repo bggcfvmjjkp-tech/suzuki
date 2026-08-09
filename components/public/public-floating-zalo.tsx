@@ -37,11 +37,9 @@ export function PublicFloatingZalo() {
         </div>
         <div className="bg-white w-20 h-20 rounded-full flex items-center justify-center shadow-lg z-10 border border-slate-200 hover:border-slate-300 transition-colors overflow-hidden order-2">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Icon_of_Zalo.svg/3840px-Icon_of_Zalo.svg.png"
+            src="/logo/social/zalo.svg"
             alt="Zalo"
-            className="w-14 h-14 object-contain"
-            loading="lazy"
-            referrerPolicy="no-referrer"
+            className="h-14 w-14 object-contain"
           />
         </div>
       </a>
