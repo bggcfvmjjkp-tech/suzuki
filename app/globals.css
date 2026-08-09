@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  font-size: 125%;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.suzuki-condensed {
+  font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
+}
+
+.price-row-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.price-row-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 650ms ease-out, transform 650ms ease-out;
+}
+
+.footer-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.footer-title::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 3px;
+  margin-top: 8px;
+  background: #ff3a41;
+}
