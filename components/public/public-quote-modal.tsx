@@ -34,7 +34,7 @@ export function PublicQuoteModal({ open, onClose }: { open: boolean; onClose: ()
     finally { setIsSubmitting(false); }
   }
 
-  return <div className="fixed inset-0 z-[100] flex items-end justify-center bg-slate-950/70 p-0 sm:items-center sm:p-5" role="dialog" aria-modal="true" aria-label="Yêu cầu báo giá">
+  return <div className="fixed inset-0 z-[10000] flex items-end justify-center bg-slate-950/70 p-0 sm:items-center sm:p-5" role="dialog" aria-modal="true" aria-label="Yêu cầu báo giá">
     <button className="absolute inset-0" aria-label="Đóng form báo giá" onClick={onClose} />
     <section className="relative max-h-[92dvh] w-full max-w-[620px] overflow-y-auto bg-white shadow-2xl sm:rounded-xl">
       <div className="relative bg-[#0b2745] px-6 pb-12 pt-7 text-center text-white sm:px-10"><img src="/suzuki/banners/home-suzuki.jpg" alt="" className="absolute inset-0 h-full w-full object-cover opacity-35" /><div className="absolute inset-0 bg-slate-950/50" /><button onClick={onClose} className="absolute right-3 top-3 rounded-full bg-white/15 p-1.5 transition hover:bg-white/25" aria-label="Đóng"><X size={22} /></button><div className="relative"><h2 className="suzuki-condensed text-3xl font-bold uppercase">Báo giá</h2><div className="mx-auto mt-2 h-1 w-24 bg-[#ef2332]" /><p className="mt-4 text-sm italic leading-relaxed sm:text-base">Nhận giá bán cực kỳ ưu đãi. Chương trình áp dụng khi khách hàng gửi thông tin qua website.</p></div></div>
