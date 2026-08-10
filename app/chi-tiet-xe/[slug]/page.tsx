@@ -1,6 +1,6 @@
 "use client";
 
-import { Phone, Menu, X } from "lucide-react";
+import { Phone, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
@@ -246,17 +246,10 @@ export default function CarDetail() {
         )}
       </main>
 
-      {/* Bottom right support button */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <button className="bg-black text-white px-5 py-2.5 shadow-lg font-bold flex items-center gap-2 hover:bg-[#333] transition-colors border border-gray-700 uppercase text-sm">
-          Hỗ trợ <Menu size={16} />
-        </button>
-      </div>
-
       {/* Modal */}
       {showModal && (
         <div className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4">
-          <div className="bg-white p-8 max-w-md w-full relative shadow-2xl border-t-4 border-[#c8102e]">
+          <div className="relative max-h-[92dvh] w-full max-w-md overflow-y-auto border-t-4 border-[#c8102e] bg-white p-5 shadow-2xl sm:p-8">
             <button onClick={() => setShowModal(false)} className="absolute top-4 right-4 text-gray-400 hover:text-black transition-colors">
               <X size={28} />
             </button>

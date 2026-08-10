@@ -18,6 +18,19 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Nội dung do quản trị viên nhập có thể chứa ảnh, video hoặc bảng rộng. */
+main img,
+main iframe,
+main table {
+  max-width: 100%;
+}
+
+@media (max-width: 639px) {
+  :root { font-size: 112.5%; }
+  input, select, textarea { font-size: 16px; }
 }
 
 .suzuki-condensed {
