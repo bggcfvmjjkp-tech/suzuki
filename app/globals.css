@@ -38,6 +38,11 @@ main table {
 @media (max-width: 639px) {
   :root { font-size: 112.5%; }
   input, select, textarea { font-size: 16px; }
+
+  /* Banner trang chủ luôn giữ tỷ lệ ảnh gốc, tránh object-cover cắt mất xe/nội dung. */
+  body main > section:first-child {
+    min-height: 0 !important;
+  }
 }
 
 .suzuki-condensed {
