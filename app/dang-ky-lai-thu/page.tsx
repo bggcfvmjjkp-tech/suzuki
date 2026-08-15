@@ -4,6 +4,7 @@ import { Send } from "lucide-react";
 import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabase";
 import { PublicPageShell } from "@/components/public/public-page-shell";
+import { trackGoogleAdsConversion } from "@/lib/google-ads";
 
 export default function TestDriveRegistrationPage() {
   const [formData, setFormData] = useState({
@@ -54,6 +55,7 @@ export default function TestDriveRegistrationPage() {
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data?.error || "Request failed");
 
+      trackGoogleAdsConversion();
       alert("Đăng ký lái thử thành công! Chúng tôi sẽ sớm liên hệ với bạn.");
       setFormData({
         carType: "VF 3",

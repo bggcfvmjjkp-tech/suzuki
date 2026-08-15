@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
+import { GOOGLE_ADS_ID } from "@/lib/google-ads";
 
 export const metadata: Metadata = {
   title: "Suzuki Vinh Nghệ An - Đại lý Suzuki chính thức",
@@ -22,6 +24,19 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <PublicSiteCarsProvider>{children}</PublicSiteCarsProvider>
       </body>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-ads-tag" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', '${GOOGLE_ADS_ID}');
+        `}
+      </Script>
     </html>
   );
 }

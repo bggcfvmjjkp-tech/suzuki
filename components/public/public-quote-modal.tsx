@@ -3,6 +3,7 @@
 import { Gift, X } from "lucide-react";
 import { FormEvent, useEffect, useState } from "react";
 import { usePublicSiteCars } from "./public-site-cars-context";
+import { trackGoogleAdsConversion } from "@/lib/google-ads";
 
 export function PublicQuoteModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   const { currentCars, serviceCars } = usePublicSiteCars();
@@ -28,6 +29,7 @@ export function PublicQuoteModal({ open, onClose }: { open: boolean; onClose: ()
     try {
       const response = await fetch("/api/lead", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ type: "Báo giá", fullName, phone, carModel }) });
       if (!response.ok) throw new Error("Gửi yêu cầu thất bại");
+      trackGoogleAdsConversion();
       alert("Yêu cầu báo giá đã được gửi. Chúng tôi sẽ liên hệ sớm nhất.");
       setFullName(""); setPhone(""); onClose();
     } catch { alert("Chưa thể gửi yêu cầu. Vui lòng thử lại sau."); }

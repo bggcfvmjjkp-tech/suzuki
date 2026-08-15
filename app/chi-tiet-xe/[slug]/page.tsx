@@ -7,6 +7,7 @@ import { useParams } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 import { PublicPageShell } from "@/components/public/public-page-shell";
 import { usePublicSiteCars } from "@/components/public/public-site-cars-context";
+import { trackGoogleAdsConversion } from "@/lib/google-ads";
 
 function toYouTubeEmbed(url: string) {
   if (url.includes("youtube.com/watch?v=")) return url.replace("watch?v=", "embed/");
@@ -280,6 +281,7 @@ export default function CarDetail() {
 
                   const data = await res.json().catch(() => ({}));
                   if (!res.ok) throw new Error(data?.error || "Request failed");
+                  trackGoogleAdsConversion();
                   alert("Gửi thông tin thành công! Chúng tôi sẽ sớm liên hệ lại.");
                   setShowModal(false);
                   setLeadForm({ name: "", phone: "", email: "", notes: "" });
