@@ -1,0 +1,99 @@
+
+Fw: hoansuzuki123@gmail.com đã gửi cho bạn một thẻ theo dõi chuyển đổi 
+Hộp thư đến
+
+Suzuki Vinh
+Tệp đính kèm
+14:16 12 thg 8, 2026 (3 ngày trước)
+đến tôi
+
+
+
+Tải xuống Outlook dành cho Android
+From: Google Ads <ads-account-noreply@google.com>
+Sent: Wednesday, 12 August 2026 10:49:23
+To: hoansuzuki123@gmail.com <hoansuzuki123@gmail.com>
+Subject: hoansuzuki123@gmail.com đã gửi cho bạn một thẻ theo dõi chuyển đổi
+ 
+Google Ads
+hoansuzuki123@gmail.com đã gửi cho bạn một thẻ theo dõi chuyển đổi
+
+Người dùng Google Ads hoansuzuki123@gmail.com đã chia sẻ một thẻ theo dõi để theo dõi các lượt chuyển đổi trên trang web của bạn. Để thêm thẻ này vào trang web, bạn hãy thực hiện theo các hướng dẫn bên dưới.
+
+Cách sử dụng thẻ
+
+
+Để tính năng theo dõi lượt chuyển đổi hoạt động, bạn cần cài đặt thẻ theo dõi lượt chuyển đổi. Thẻ này bao gồm một thẻ Google và một đoạn mã sự kiện. Nếu bạn cài đặt thẻ bằng Trình quản lý thẻ của Google, hãy làm theo những hướng dẫn này.
+
+Nếu đã tạo các trang web bằng cách sử dụng AMP, bạn cần phải thêm thẻ vào cả phiên bản AMP và HTML. Chúng tôi cung cấp thông tin hướng dẫn cho cả hai phiên bản này.
+
+TRANG HTML
+
+Cài đặt thẻ Google trên mọi trang thuộc trang web của bạn.
+Mở HTML cho từng trang.
+Chọn từ các tùy chọn sau đây:
+Nếu bạn chưa cài đặt thẻ Google trên trang web của mình, hãy sao chép thẻ dưới đây rồi dán vào giữa các thẻ head (<head></head>):
+
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18143133918"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18143133918'); </script>
+
+Xem thêm hướng dẫn về cách thiết lập thẻ Google.
+
+Nếu bạn đã cài đặt thẻ Google trên trang web của mình từ một sản phẩm khác của Google (ví dụ: Google Analytics) hoặc từ một tài khoản Google Ads khác, hãy sao chép lệnh "config" bên dưới rồi thêm lệnh này vào mỗi bản sao của thẻ Google, ngay phía trên thẻ kết thúc </script>.
+
+gtag('config', 'AW-18143133918');
+
+Nếu bạn hoặc một tài khoản người quản lý đã cài đặt thẻ Google trên trang web của bạn trong khi thiết lập thẻ cho một hành động chuyển đổi khác, hãy chắc chắn rằng thẻ đó nằm trên mọi trang của trang web. Đồng thời, hãy kiểm tra để đảm bảo rằng lệnh "config" có mã chuyển đổi AW-18143133918 của tài khoản Google Ads này
+Lưu các thay đổi đối với trang web của bạn.
+
+Cài đặt đoạn mã sự kiện trên trang chuyển đổi. Đây là trang mà khách hàng của bạn truy cập trên trang web sau khi hoàn thành một chuyển đổi — ví dụ: trang "Cảm ơn bạn đã đặt hàng".
+Mở HTML cho trang chuyển đổi.
+Sao chép đoạn mã dưới đây rồi dán vào giữa các thẻ head (<head></head>) của trang, ngay sau thẻ Google.
+
+<!-- Event snippet for Liên hệ conversion page --> <script> gtag('event', 'conversion', {'send_to': 'AW-18143133918/m78oCMO_86gcEN6BqctD'}); </script>
+
+Lưu các thay đổi đối với trang web của bạn.
+TRANG AMP
+
+Bạn nên làm theo các thông tin hướng dẫn này cho bất kỳ trang nào đã tạo bằng cách sử dụng khung AMP.
+
+Cài đặt thẻ Google trên mọi trang thuộc trang web của bạn.
+Mở HTML cho từng trang.
+Chọn từ các tùy chọn sau đây:
+Nếu bạn chưa cài đặt thẻ Google trên trang web của mình, hãy thêm 2 thẻ sau:
+Trước tiên, hãy sao chép và dán thẻ bên dưới vào giữa các thẻ head (<head></head>), trước thư viện AMP JS.
+
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+Sau đó, sao chép và dán thẻ bên dưới vào giữa các thẻ body (<body></body>) của tất cả các trang AMP
+
+<!-- Google tag (gtag.js) --> <amp-analytics type="gtag" data-credentials="include"> <script type="application/json"> { "vars": { "gtag_id": "AW-18143133918", "config": { "AW-18143133918": { "groups": "default" } } }, "triggers": { } } </script> </amp-analytics>
+
+Xem thêm hướng dẫn về cách thiết lập thẻ Google.
+Nếu bạn đã cài đặt thẻ Google trên trang web của mình từ một sản phẩm khác của Google (ví dụ: Google Analytics) hoặc từ một tài khoản Google Ads khác, hãy sao chép dòng bên dưới rồi thêm dòng này vào mục "config" của mỗi bản sao của thẻ Google.
+
+"AW-18143133918": { "groups": "default" }
+
+Nếu bạn hoặc một tài khoản người quản lý đã cài đặt thẻ Google trên trang web của bạn trong khi thiết lập thẻ cho một hành động chuyển đổi khác, hãy chắc chắn rằng thẻ đó nằm trên mọi trang của trang web. Đồng thời, hãy kiểm tra để đảm bảo rằng mục "config" có mã chuyển đổi AW-18143133918 của tài khoản Google Ads này
+Lưu các thay đổi đối với trang web của bạn.
+
+Cài đặt đoạn mã sự kiện trên trang chuyển đổi. Đây là trang mà khách hàng của bạn truy cập trên trang web sau khi hoàn thành một chuyển đổi — ví dụ: trang "Cảm ơn bạn đã đặt hàng".
+Mở HTML cho trang chuyển đổi.
+Sao chép đoạn mã dưới đây rồi dán vào mục "triggers" của thẻ Google.
+
+"C_tHJcDtHexj4": { "on": "visible", "vars": { "event_name": "conversion", "send_to": ["AW-18143133918/m78oCMO_86gcEN6BqctD"] } }
+
+Lưu các thay đổi đối với trang web của bạn.
+Tìm hiểu thêm về cách thêm thẻ theo dõi chuyển đổi vào trang web.
+
+Xin cảm ơn!
+
+Nhóm Google Ads
+
+Chúng tôi gửi email này để cập nhật cho bạn về tài khoản Google Ads của bạn.
+
+Google
+© 2026 Google LLC
+1600 Amphitheatre Parkway,
+Mountain View, CA 94043
+ Một tệp đính kèm
+  •  Do Gmail quét
